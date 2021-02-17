@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1"> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="7g.css">
+ 
+  <style>
+   .umeno{
+     border:3px solid yellow;
+   }
+
+  </style>
+
+
+   <script>
+     $(function(){
+        $('.job-img').css('display','none');
+
+        $('#wrapper').css('display','none');
+
+        $('header ul').on('click',function(){
+        console.log('柿本');
+           $('.job-text').css('backgroundColor','rgba(0,0,0,0.3)');    
+           $('.job-text h2 , .job-text p').css('color','#FFF');
+
+        });
+
+        $('li').on('click',function(){
+          $(this).css('fontSize','3em');
+
+        });
+
+        $('.logo img').on('click',function(){
+         // $('header ul').slideToggle(2000); 
+          $('header ul').toggleClass('umeno');
+
+        });
+
+        var titleScroll =  $("#title").offset().top;
+         console.log(titleScroll);
+
+
+         if (titleScroll <200){
+           console.log("読み込まれています")
+           $('#wrapper').fadeIn(4000);
+         } 
+
+          $(window).scroll(function(){
+           console.log(st);
+           var st =   $(this).scrollTop();
+            if (st > 100){
+               $('.job-img').fadeIn(4000);
+            }
+
+
+          });
+
+
+
+
+
+
+
+      });
+   </script>
+
+ </head>
+ <body>
+  <div id="wrapper">
+    <header>
+      <ul>
+        <li><a href="7g.html">TOP</a></li>
+        <li><a href="sg.html">Our Hotel</a></li>
+        <li>contact</li>
+      </ul>
+    <div class="logo">
+        <img src="logo.png">
+      </div>
+    </header>
+    <main>
+     <div id="title">
+       <div id="title-text">
+        <h1>BEYOND BODERLESS.<br>BEYOND LIMITS.</h1>
+       <p>あらゆるボーダーを取り除く多様な企業</p>
+       </div>
+     </div>
+
+    <div class="business">
+     <div class="job">
+       <div class="job-img">
+          <img src="system.jpg">
+       </div>
+       <div class="job-text">
+          <h2>システム開発事業<h2>
+          <p>5G・ビックデータ・AIなど目まぐるしく技術革新が進むテクノロジー。<br>
+しかしいつの時代もテクノロジーは道具やツールでしかありません。<br>
+当社の経験豊富なメンバーがお客様の課題に徹底的に寄り添いながらベストソリューションを創出します。<br>また、官庁系補助金の申請支援から会計面のサポートまで、システムの<br>受託開発はもちろんのこと資金パッケージについても一気通貫して対応可能な点は当社固有の強みとなります。<br>まずは幅広お気軽にご相談ください</p>
+       </div>
+      </div>
+     <div class="job">
+       <div class="job-img">
+          <img src="kagurazaka.jpg">
+       </div>
+       <div class="job-text">
+          <h2>ホテル運営事業<h2>
+          <p>立地、建物規模においてバランスのとれた最適なホテルをゼロから創るのが7gardenの特徴であり、強みです。<br> 企画における需要予測、企画後の開発・運営まで集客から逆算したホテル設計を行います。<br>自社開発のテクノロジーと 蓄積されたノウハウによって、その体制を構築しています。</p>
+       </div>
+      </div>
+   </div>
+   <div class="business">
+     <div class="job">
+       <div class="job-img">
+          <img src="fudosan.jpg">
+       </div>
+       <div class="job-text">
+          <h2>不動産事業部<h2>
+          <p>7gardenは不動産選定を得意としています。<br>
+ビックデータ・AIを活用した需要予測システムを自社開発するなど、テクノロジーの活用によって、<br>立地と建物規模の良いバランスのとれた、最適な不動産情報の提案ができます。</p>
+       </div>
+      </div>
+     <div class="job">
+       <div class="job-img">
+          <img src="consal.jpg">
+       </div>
+       <div class="job-text">
+          <h2>補助金コンサルティング事業<h2>
+           <p>変容し続ける顧客ニーズと進展するテクノロジー。<br>サービス開発にむけたアプローチ手法はより質の高い専門性が求められます。<br>補助金採択の評価基準も同様です。当社におけるテクノロジーの知見×補助金プロフェッショナル人材のかけ算で、<br>お客様に寄り添った最適な補助金獲得支援をワンストップでご提供します。</p>
+       </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    </main>
+    <footer>
+      <ul>
+        <li><a href="7g.html">TOP</a></li>
+        <li><a href="sg.html">Our Hotel</a></li>
+        <li>contact</li>
+      </ul>
+    </footer>
+
+  </div>
+ </body>
+</html>
